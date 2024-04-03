@@ -1,0 +1,38 @@
+{% if character %}
+
+<style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+</style>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Height</th>
+            <th>Gender</th>
+            <th>Weight</th>
+        </tr>
+        <tr>
+            <td>{{ character.name }}</td>
+            <td>{{ character.age }}</td>
+            <td>{{ character.height }}</td>
+            <td>{{ character.gender }}</td>
+            <td>{{ character.weight }}</td>
+        </tr>
+{% else %}
+    <p>No character was found.</p>
+{% endif %}
